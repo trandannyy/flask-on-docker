@@ -1,0 +1,32 @@
+# Overview
+
+This repo utilizes the Instagram tech stack in order to create a webpage (locally hosted) that a user can upload images to. Those images are stored in a database which can be accessed at a later time. This repo is separated into two sections: production and development which each have their own Dockerfiles to run.
+
+Insert GIF
+
+# Build Instructions
+We will separate the build instructions into two phases.
+**Phase 1**
+To begin to use this service, we must enable portforwarding.
+
+We can bring down any open containers to ensure there are no issues with pre-existing containers. To do so, we can run the following line:
+
+```
+docker compose down -v
+```
+
+The `-v` brings down associated volumes.
+
+Then, we can run the line:
+
+```
+docker compose -f docker-compose.prod.yml up -d --build
+```
+This line starts up the service so that we can begin using it. Note, that the `-d` stands for "daemon" which runs the service in the background. To ensure it is working, you can try running `docker ps -a` to see if there are processes, otherwise, proceed with the next step!
+
+**Phase 2**
+Now that the service is up and running, load up a web browser page, Firefox is recommended. Then search: "localhost:YOURPORT/upload".
+
+From here, press "Upload" and upload your image of choice. Then, to view your image, head over to "localhost:YOURPORT/media/YOURFILENAME".
+
+You should now see your image! If you do not, ensure that you are correctly portforwarding and using the correct file name (potentially including the file extension!)
