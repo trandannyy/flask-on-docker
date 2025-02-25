@@ -14,7 +14,7 @@ To begin to use this service, we must enable portforwarding.
 We can bring down any open containers to ensure there are no issues with pre-existing containers. To do so, we can run the following line:
 
 ```
-docker compose down -v
+$ docker compose down -v
 ```
 
 The `-v` brings down associated volumes.
@@ -22,8 +22,8 @@ The `-v` brings down associated volumes.
 Then, we can run the lines:
 
 ```
-docker compose -f docker-compose.prod.yml up -d --build
-docker compose -f docker-compose.prod.yml exec web python manage.py create_db
+$ docker compose -f docker-compose.prod.yml up -d --build
+$ docker compose -f docker-compose.prod.yml exec web python manage.py create_db
 ```
 This first line starts up the service so that we can begin using it. Note, that the `-d` stands for "daemon" which runs the service in the background. 
 
