@@ -1,8 +1,8 @@
 # Overview
 
-This repo utilizes the Instagram tech stack in order to create a webpage (locally hosted) that a user can upload images to. Those images are stored in a database which can be accessed at a later time. This repo is separated into two sections: production and development which each have their own Dockerfiles to run.
+This repo utilizes the Instagram tech stack in order to create a webpage (locally hosted) that a user can upload images to. Those images are stored using PostgreSQL which can be accessed at a later time. Since this repo follows Instagram's tech stack, it is separated into two sections: production and development which each have their own Dockerfiles to run. This distinction allows us to troubleshoot more easily in the development phase and to ensure our production phase goes well.
 
-Insert GIF
+<img src=flask-on-docker width=100% />
 
 # Build Instructions
 We will separate the build instructions into two phases.
