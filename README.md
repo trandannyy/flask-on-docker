@@ -19,12 +19,17 @@ docker compose down -v
 
 The `-v` brings down associated volumes.
 
-Then, we can run the line:
+Then, we can run the lines:
 
 ```
 docker compose -f docker-compose.prod.yml up -d --build
+docker compose -f docker-compose.prod.yml exec web python manage.py create_db
 ```
-This line starts up the service so that we can begin using it. Note, that the `-d` stands for "daemon" which runs the service in the background. To ensure it is working, you can try running `docker ps -a` to see if there are processes, otherwise, proceed with the next step!
+This first line starts up the service so that we can begin using it. Note, that the `-d` stands for "daemon" which runs the service in the background. 
+
+The second line creates the table to store images for the service.
+
+To ensure everything is working, you can try running `docker ps -a` to see if there are processes, otherwise, proceed with the next step!
 
 **Phase 2**
 
