@@ -6,6 +6,7 @@ This repo utilizes the Instagram tech stack in order to create a webpage (locall
 
 # Build Instructions
 We will separate the build instructions into two phases.
+
 **Phase 1**
 To begin to use this service, we must enable portforwarding.
 
